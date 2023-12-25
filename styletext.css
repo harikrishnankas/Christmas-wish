@@ -1,0 +1,43 @@
+section {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .text-container .text-box {
+  margin: 20px;
+  padding: 50px;
+  color: #D8E3E7;
+  text-shadow: 2px 2px 4px #000000;
+  background-image: url(https://img.freepik.com/premium-photo/winter-landscape-with-snow-covered-trees-full-moon-night-sky_728418-848.jpg?w=740);
+}
+
+
+@media (max-width: 900px) {
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 2s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

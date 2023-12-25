@@ -1,0 +1,241 @@
+body {
+    background-color: #2B2A4C;
+  }
+
+  .birthday-gift {
+    position: relative;
+    z-index: 10 ;
+    
+  }
+  
+  .birthday-gift:before {
+    content:"";
+    position: absolute;
+    width: 85px;
+    height:20px;
+    border-radius:50%;
+    background-color: rgba(0,0,0,0.4);
+    top:45px;
+    left:-10px;
+  }
+  
+  input#click {
+    display: none;
+  }
+  
+  .gift {
+    position: relative;
+    width: 75px;
+    height: 50px;
+    background-color: #B31312;
+  }
+  
+  .gift:before {
+    content:"";
+    position: absolute;
+    width: 12.5px;
+    height: 50px;
+    background-color: #EEE2DE;
+    left:31px;
+  }
+  
+  .gift:after {
+    content:"";
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0,0,0,0.3);
+    width: 75px;
+    height: 50px;
+  }
+  
+  .click {
+    position: absolute;
+    background-color: #B31312;
+    width: 85px;
+    height: 20px;
+    top:-20px;
+    left:-5px;
+    transform-origin: bottom left;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .click:before {
+    content:"";
+    position: absolute;
+    width: 12.5px;
+    height: 20px;
+    background-color: #EEE2DE;
+    left:36px;
+  }
+  
+  .click:after {
+    content:"";
+    position: absolute;
+    width: 0px;
+    height: 0;
+    border-bottom: 30px solid #EEE2DE;
+    border-top: 30px solid #EEE2DE;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left:25px;
+    top:-45px;
+  }
+  
+  #click:checked + .click {
+    transform: rotate(-110deg) scaleX(0.85);
+  }
+  
+  .wishes {
+    position: absolute;
+    transition: .5s;
+    color: #EA906C;
+    font-size: 10px;
+    text-align: center;
+    z-index:-1;
+    left:5px;
+  }
+  
+  #click:checked ~ .wishes {
+    transform: translateY(-50px);
+  }
+  
+  #click:checked ~ .sparkles {
+    display: block;
+  }
+  
+  
+  
+  .sparkles {
+    position: absolute;
+    display: none;
+    top:-15px;
+    z-index:-2;
+    left:2.5px;
+  }
+  
+  .spark1, .spark2, .spark3, .spark4, .spark5, .spark6 {
+    position: absolute;
+    background-color: #fee440;
+    border-radius:50%;
+    top:-9px;
+    z-index:-1;
+  }
+  
+  .spark1 {
+    width: 8px;
+    height:8px;
+    left:30px;
+    top:-9px;
+    animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark1:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:8px;
+    left:11px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark2 {
+    width: 9px;
+    height:9px;
+    left:33px;
+    top:-5px;
+    animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark2:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:12px;
+    left:3px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark3 {
+    width: 8.5px;
+    height:8.5px;
+    left:33px;
+    top:-5px;
+    animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
+  }
+  
+  .spark3:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:12px;
+    left:-1px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark4 {
+    width: 7px;
+    height:7px;
+    left:27px;
+    top:-5px;
+    animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
+  }
+  
+  .spark5 {
+    width: 7px;
+    height:7px;
+    left:29px;
+    top:-5px;
+    animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
+  }
+  
+  .spark6 {
+    width: 6px;
+    height:6px;
+    left:29px;
+    top:-5px;
+    animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
+  }
+    
+  @keyframes fire3 {
+    100% { transform:translateX(20px) translateY(-93px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire2 {
+    100% { transform:translateX(-5px) translateY(-90px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire {
+    100% { transform:translateX(-25px) translateY(-95px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes color {
+    from {background-color: #d00000;}
+    to {background-color: #0081a7;}
+  }
+  
+  @keyframes color2 {
+    from {background-color: #8cff00;}
+    to {background-color: #1d2d44;}
+  }
+  
+  
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
+
+
+

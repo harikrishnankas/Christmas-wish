@@ -1,0 +1,19 @@
+body {
+    height: 1700px;
+    background: #2B2A4C;
+  }
+  .container {
+    overflow: hidden;
+  }
+  .santa {
+    display: block;
+    position: absolute;
+  }
+  .santa {
+    background: url("picmix.com_1571548.gif");
+    width: 400px;
+    height: 200px;
+  }
+  
+
+  
