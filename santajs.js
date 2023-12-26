@@ -1,4 +1,12 @@
-var _containerHeight = 2000;
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+
+
+var _containerHeight = 1700;
 var _width, _height, _scrollHeight;
 var letters = document.getElementsByTagName('span');
 var _movingElements = [];
@@ -14,7 +22,7 @@ if (_width <= 900) {
     {
       name: 'santa', 
        start: {
-        percent: 0.02, x: 0.001, y: 0.005
+        percent: 0.02, x: 0.01, y: 0.005
       },
       end: {
         percent: 1.0, x: 0.01 , y: 0.95
@@ -31,7 +39,7 @@ if (_width <= 900) {
         percent: 0.02, x: 0.1, y: 0.005
       },
       end: {
-        percent: 1.0, x: 0.7 , y: 0.95
+        percent: 1.0, x: 0.7 , y: 0.9
       }
     }
   
@@ -75,7 +83,7 @@ function updateElements() {
 
 
 function loop() {
-  _scrollOffset = window.pageYOffset || window.scrollTop;
+  _scrollOffset = window.scrollY || window.scrollTo;
   _scrollPercent = _scrollOffset/_scrollHeight || 0;
   updateElements();
   

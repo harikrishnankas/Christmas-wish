@@ -1,19 +1,25 @@
 body {
-    height: 1700px;
+    height: 1650px;
     background: #2B2A4C;
   }
-  .container {
-    overflow: hidden;
-  }
+
   .santa {
-    display: block;
     position: absolute;
   }
   .santa {
-    background: url("picmix.com_1571548.gif");
+    background: url("output-onlinegiftools.gif");
+    max-width: 100%;
     width: 400px;
-    height: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 900px) {
+    .santa {
+      display: inline;
+      background: url("ezgif.com-resize.gif");
+      width: 300px;
+    }
   }
   
-
-  
+ 
