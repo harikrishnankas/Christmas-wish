@@ -3,23 +3,16 @@ var body = document.body,
 
 var height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-console.log(height);
 
 const screenWidth  =  window.innerWidth;
-const screenHeight = window.innerHeight;
-console.log(screenHeight);
 var gift = document.querySelector(".birthday-gift");
 if (screenWidth <= 900){
   gift.style.left = screenWidth*0.05+'px';
-  // gift.style.top = 1650*0.88 + "px";
 }
 else{
   gift.style.left = screenWidth*0.7+'px';
-  // gift.style.top = 1490 + "px";
 }
-
 gift.style.top = height*0.9 + "px";
-
 
 
 
@@ -41,3 +34,13 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+
+  function boxopen(){
+    if(document.getElementById("click").checked == 1){
+      document.getElementById("click").checked = 0;
+    } else{
+      document.getElementById("click").checked = 1;
+    }
+    
+  }

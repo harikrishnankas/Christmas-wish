@@ -1,6 +1,9 @@
 body {
     background-color: #2B2A4C;
   }
+  input#gift{
+    display: none;
+  }
   .wishes{
     display: none;
   }
@@ -22,7 +25,7 @@ body {
     left:-10px;
   }
   
-  input#click {
+  input {
     display: none;
   }
   
@@ -74,8 +77,6 @@ body {
   .click:after {
     content:"";
     position: absolute;
-    width: 0px;
-    height: 0;
     border-bottom: 30px solid #EEE2DE;
     border-top: 30px solid #EEE2DE;
     border-left: 0px solid transparent;
@@ -96,16 +97,16 @@ body {
     color: #EA906C;
     font-size: 10px;
     text-align: center;
-    z-index:-1;
     left:5px;
   }
   
   #click:checked ~ .wishes {
     transform: translateY(-150px);
-    display: inline-table;
+    display: inline;
   }
   
   #click:checked ~ .sparkles {
+    z-index: 9;
     display: block;
   }
   
